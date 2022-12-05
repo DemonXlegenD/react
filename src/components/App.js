@@ -5,7 +5,7 @@ import Banner from './Banner';
 import Body from './Body';
 import '../styles/Body.css'
 import NavScroll from './Navbar';
-
+import Movies from './Movies';
 
 function App() {
   return (
@@ -16,7 +16,9 @@ function App() {
       <NavScroll/>
       <Body>
         <img src={fondecran} alt="films" id="fondecran"/>
+        <Movies/>
       </Body>
+      
     </div>
   );
 }
