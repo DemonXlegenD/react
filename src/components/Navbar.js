@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css'
+import { Link } from 'react-router-dom';
 
 function NavScroll() {
   return (
@@ -14,12 +15,13 @@ function NavScroll() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+          fill variant="tabs"
+            className="me-auto my-2 my-lg-0 "
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="#action2">FILMS</Nav.Link>
+            <Nav.Link><Link to={"/"}>HOME</Link></Nav.Link>
+            <Nav.Link><Link   to={"/films"}>FILMS</Link></Nav.Link>
             <NavDropdown title="CONNEXION" id="navbarScrollingDropdown">
               <NavDropdown.Item href="../public/inscription.html" target="_blank">Inscription</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -33,6 +35,7 @@ function NavScroll() {
             <Nav.Link href="#" disabled>
               Link
             </Nav.Link>
+          
           </Nav>
           <Form className="d-flex">
             <Form.Control

@@ -2,3 +2,8 @@ span.text{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.navbarecart{
+    display: flex;
+    flex-direction: row;
+
+}
