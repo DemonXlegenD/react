@@ -65,7 +65,8 @@ function Cards(props){
               return(
                   <div key={film.id}>
                     <a href="" className="card">
-                    <img src="./logostreamfy.png" className="card__image" alt="" />
+                    {film.poster_path=="" && <img src="./logostreamfy.png" className="card__image" alt="logo STREAMFY"/>}
+                    {film.poster_path!="" && <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${film.poster_path}`} className="card__image" alt={film.original_title}/>}
                     <div className="card__overlay">
                       <div className="card__header">
                         <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
@@ -82,7 +83,7 @@ function Cards(props){
                   </div>
               ) 
               })} 
-              {/* {(axios.get(`https://api.themoviedb.org/3/movie/${film.id}/images?api_key=d3994bb5c3f66e144147b5e2130fc60c)`))} */}
+               
 
               
             </section>
