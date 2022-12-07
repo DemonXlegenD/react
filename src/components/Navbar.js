@@ -6,9 +6,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-function NavScroll() {
+
+function NavScroll({string, setString}) {
+
+
+  console.log(string)
+
+  function handleChange(e) {
+    setString(e.target.value)
+    console.log(e.target.value)
+  }
+
   return (
+
     <Navbar bg='light' expand="lg">
       <Container fluid>
         <Navbar.Brand href="#"><span className='text'>STREAMFY</span></Navbar.Brand>
@@ -43,14 +55,18 @@ function NavScroll() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={handleChange}
             />
+            
             <Button className="navsearch"variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+
+    );
 }
 
 
-export default NavScroll;
+export default NavScroll; 
+

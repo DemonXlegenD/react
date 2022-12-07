@@ -1,4 +1,4 @@
-import Movies from "../components/Movies";
+
 import logostreamfy from '../assets/logostreamfy.png'
 import fondecran from '../assets/streamfyfondecran.jpg'
 import '../styles/App.css';
@@ -9,6 +9,7 @@ import NavScroll from '../components/Navbar';
 
 function Home(){
 
+
     return(
         <div>
             <Banner>
@@ -17,7 +18,7 @@ function Home(){
             <NavScroll/>
             <Body>
                 <img src={fondecran} alt="films" id="fondecran"/>
-                <Movies/>
+                
             </Body>
         </div>
     )

@@ -31,10 +31,11 @@
   }
 
   .secards {
+  
   overflow-x:auto;
   overscroll-behavior-x: contain;
   display: flex;
-  gap: var(--size-10);
+  gap: var(--size-5);
   align-items: start;
   padding-right: var(--size-10);
   padding-left: var(--size-10);
@@ -46,7 +47,7 @@
   section{  
     
     display: grid;
-    place-content: center;
+
 
   }
   
