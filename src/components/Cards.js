@@ -30,7 +30,7 @@ function Cards(props){
       getData();
       
     }, [string]);
-  
+    
     
     return(
         <div>
