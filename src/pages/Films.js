@@ -5,7 +5,6 @@ import Banner from '../components/Banner';
 import Body from '../components/Body';
 import '../styles/Body.css'
 import NavScroll from '../components/Navbar';
-import '../styles/Cards.css'
 import Movies from '../components/Movies';
 
 function Films(){

@@ -1,42 +1,85 @@
-// import React, { useState } from "react";
-// import axios from "axios";
-// import { useEffect } from "react";
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-// import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
+import { CardGroup } from "react-bootstrap";
+import '../styles/RandomFilms.css'
 
 
+function RandomFilms() {
 
-// function RandomFilms() {
+    
+    const [listMovies1, setListMovies1]= useState([])
+    const [listMovies2, setListMovies2]= useState([])
+    const [listMoviesFiltered1, setListMoviesFiltered1]= useState([])
+    const [listMoviesFiltered2, setListMoviesFiltered2]= useState([])
+  
+    async function getData() {
 
-//     let list1 = axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=d3994bb5c3f66e144147b5e2130fc60c`);
-//     let list2 = axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=d3994bb5c3f66e144147b5e2130fc60c`);
-//     let list3 = [...list1, list2]
+        const res1 = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=d3994bb5c3f66e144147b5e2130fc60c`)
+        console.log("res1", res1.data);
+        setListMovies1(res1.data.results);
+        setListMoviesFiltered1(res1.data.results)
+        console.log("liste", listMovies1)
+        const res2 = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=d3994bb5c3f66e144147b5e2130fc60c`)
+        console.log("res2", res1.data);
+        setListMovies2(res2.data.results);
+        setListMoviesFiltered2(res2.data.results)
+        console.log("liste", listMovies2)
+        
+    }
+    
+    useEffect(() => {
+        getData();
+        
+      }, []);
 
-//     return (
-//         <div>
-//             {
-//                 list3.map((film) => {
-//                     return (
-//                         <div key={film.id}>
-//                             <Card style={{ width: '18rem' }}>
-//                                 <Card.Img variant="top"  />
-//                                 <Card.Body>
-//                                     <Card.Title>{film.original_title}</Card.Title>
-//                                     <Card.Text>
-//                                         {film.overview}
-//                                     </Card.Text>
-//                                     <Button variant="primary"><Link to={`/films/info/${film.id}`}>Informations</Link></Button>
-//                                 </Card.Body>
-//                             </Card>
-//                         </div>
-//                     )
-//                 }
+    return (
+        <div>
+            <CardGroup className="cardgroup">
+            {listMoviesFiltered1.map((film) => {
+                 return (
+                     <div key={film.id}>
+                         <Card style={{ width: '18rem' }}>
+                             <Card.Img variant="top"  />
+                             <Card.Body>
+                                 <Card.Title>{film.original_title}</Card.Title>
+                                 <Card.Text>
+                                 <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${film.poster_path}`}/> 
+                                 </Card.Text>
+                                 <Button><Link to={`/films/info/${film.id}`}>Informations</Link></Button>
+                             </Card.Body>
+                         </Card>
+                     </div>
+                    )
+                }
 
-//                 )
-//             }
-//         </div>
-//     )
-// }
+                )
+            }
+            {listMoviesFiltered2.map((film) => {
+                 return (
+                     <div key={film.id}>
+                         <Card style={{ width: '18rem' }}>
+                             <Card.Img variant="top"  />
+                             <Card.Body>
+                                 <Card.Title>{film.original_title}</Card.Title>
+                                 <Card.Text>
+                                    <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${film.poster_path}`}/> 
+                                 </Card.Text>
+                                 <Button><Link to={`/films/info/${film.id}`}>Informations</Link></Button>
+                             </Card.Body>
+                         </Card>
+                     </div>
+                    )
+                }
 
-// export default RandomFilms;
+                )
+            }
+            </CardGroup>
+        </div>
+    )
+}
+
+export default RandomFilms;

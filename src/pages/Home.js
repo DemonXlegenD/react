@@ -1,7 +1,6 @@
 
 import logostreamfy from '../assets/logostreamfy.png'
 import fondecran from '../assets/streamfyfondecran.png'
-
 import Banner from '../components/Banner';
 import Body from '../components/Body';
 import '../styles/Body.css'
@@ -21,9 +20,11 @@ function Home() {
             </Banner>
             <NavScroll />
             <Body>
+
+                <h1 className='card-title'>HOME PAGE</h1>
                 <img src={fondecran} alt="films" id="fondecran" />
                 
-                {/* <RandomFilms/> */}
+                <RandomFilms/>
             </Body>
 
         </div>

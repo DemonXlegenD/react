@@ -5,12 +5,14 @@ import Banner from '../components/Banner';
 import Body from '../components/Body';
 import '../styles/Body.css'
 import NavScroll from '../components/Navbar';
-import axios from "axios";
+
+import Informations from '../components/Informations';
 
 
 
 
 function Films_info(){
+    
     return(
         <div>
             <Banner>
@@ -19,10 +21,12 @@ function Films_info(){
             <NavScroll/>
             <Body>
                 <img src={fondecran} alt="films" id="fondecran"/>
-                
+                <Informations/>
+
             </Body>
-        </div>
-    )
+            </div>
+        )
+    
 }
 
 export default Films_info;

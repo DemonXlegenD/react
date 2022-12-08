@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import '../styles/Cartes.css'
 
 
 function Cards(props){
@@ -56,7 +57,7 @@ function Cards(props){
               return(
                   <div key={film.id}>
                     <Link to={`/films/info/${film.id}`}>
-                    <a href="" className="card">
+                    <a href="" className="card_">
                     {film.poster_path =="" && <img src="./logostreamfy.png" className="card__image" alt="logo STREAMFY"/>}
                     {film.poster_path !="" && <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${film.poster_path}`} className="card__image" alt={film.original_title}/>}
                     <div className="card__overlay">
