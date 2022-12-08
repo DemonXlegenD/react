@@ -1,6 +1,8 @@
+
 #fondecran {
     /* Fixe l'image en haut à gauche de la page */
     z-index: -1;
+    opacity: 0.5;
     position: fixed; 
     display: flex;
     justify-content:center;

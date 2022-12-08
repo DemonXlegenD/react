@@ -1,4 +1,3 @@
-
 import logostreamfy from '../assets/logostreamfy.png'
 import fondecran from '../assets/streamfyfondecran.jpg'
 
@@ -6,10 +5,12 @@ import Banner from '../components/Banner';
 import Body from '../components/Body';
 import '../styles/Body.css'
 import NavScroll from '../components/Navbar';
+import axios from "axios";
 
-function Home(){
 
 
+
+function Films_info(){
     return(
         <div>
             <Banner>
@@ -24,4 +25,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default Films_info;

@@ -7,3 +7,8 @@ span.text{
     flex-direction: row;
 
 }
+.d-flex {
+    position: absolute;
+    right: 0;
+    margin-right:25px
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
 function Cards(props){
@@ -43,13 +44,14 @@ function Cards(props){
     
     return(
         <div>
-
-            <h1 className="populaire">{props.category}</h1>
+          {listMoviesFiltered.length !=0 && <div>
+            <h1 className="populaire">{props.category.toUpperCase()}</h1>
             <section className="secards">
               
-              {listMoviesFiltered.map((film) => {
+              {listMoviesFiltered.length !=0 && listMoviesFiltered.map((film) => {
               return(
                   <div key={film.id}>
+                    <Link to={`/films/info/${film.id}`}>
                     <a href="" className="card">
                     {film.poster_path =="" && <img src="./logostreamfy.png" className="card__image" alt="logo STREAMFY"/>}
                     {film.poster_path !="" && <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${film.poster_path}`} className="card__image" alt={film.original_title}/>}
@@ -66,6 +68,7 @@ function Cards(props){
                       <p className="card__description">{film.overview}</p>
                     </div>
                     </a> 
+                    </Link>
                   </div>
               ) 
               })} 
@@ -74,6 +77,7 @@ function Cards(props){
 
               
             </section>
+            </div>}
         </div>
     )   
 }

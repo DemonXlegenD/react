@@ -25,13 +25,13 @@
   }
 
   .secards > div {
-    block-size: var(--size-15);
+    block-size: var(--size-14);
     aspect-ratio: var(--ratio-square);
     border-radius: var(--radius-3);
   }
 
   .secards {
-  
+
   overflow-x:auto;
   overscroll-behavior-x: contain;
   display: flex;
@@ -40,15 +40,19 @@
   padding-right: var(--size-10);
   padding-left: var(--size-10);
   padding-top: var(--size-5);
-  padding-bottom: var(--size-11);
+  padding-bottom: var(--size-12);
   border-radius: var(--radius-3);
   }
 
-  section{  
-    
+
+  .secards:hover {
+    gap: var(--size-10);
+    padding-top: var(--size-6);
+    padding-bottom: var(--size-13);
+  }
+
+  section{     
     display: grid;
-
-
   }
   
   .cards {
@@ -66,12 +70,20 @@
   .card {
     position: relative;
     display: block;
-    height: 120%;  
+    height: 140%;  
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
     background-color: #7c7c7c;
     
+  }
+
+  .card:hover{
+    top: -30px;
+    left: -30px;
+    height: 160%;
+    width: 120%;
+
   }
   
   .card__image {      

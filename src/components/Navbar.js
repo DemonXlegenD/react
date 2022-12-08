@@ -32,7 +32,7 @@ function NavScroll({string, setString}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link><Link to={"/"}>HOME</Link></Nav.Link>
+             <Nav.Link><Link to={"/"}>HOME</Link></Nav.Link>
             <Nav.Link><Link   to={"/films"}>FILMS</Link></Nav.Link>
             <NavDropdown title="CONNEXION" id="navbarScrollingDropdown">
               <NavDropdown.Item href="../public/inscription.html" target="_blank">Inscription</NavDropdown.Item>
@@ -41,13 +41,10 @@ function NavScroll({string, setString}) {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Sécurité    
+                Sécurité
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          
+
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -57,8 +54,7 @@ function NavScroll({string, setString}) {
               aria-label="Search"
               onChange={handleChange}
             />
-            
-            <Button className="navsearch"variant="outline-success">Search</Button>
+
           </Form>
         </Navbar.Collapse>
       </Container>
