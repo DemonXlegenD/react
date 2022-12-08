@@ -18,7 +18,11 @@ function Cards(props){
         setListMovies(res.data.results);
         setListMoviesFiltered(res.data.results)
         console.log("liste", listMovies)
-        if(string!=""){
+        
+    }
+
+    function filtre(){
+        if(string != ""){
           setListMoviesFiltered(
           listMovies.filter((film) => film.original_title.includes(string))
         )} else {
@@ -26,9 +30,14 @@ function Cards(props){
           console.log("liste", listMoviesFiltered)
         }
     }
+
     useEffect(() => {
       getData();
       
+    }, []);
+
+    useEffect(() => {
+      filtre();
     }, [string]);
     
     
