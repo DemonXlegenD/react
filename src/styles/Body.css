@@ -15,3 +15,14 @@
     max-width: 100%;
 
  }
+
+#pos1{
+    left: 1000px;
+    top: 100px;
+    position:sticky;
+    margin:20px;
+   
+
+}
+
+

@@ -1,5 +1,5 @@
 import logostreamfy from '../assets/logostreamfy.png'
-import fondecran from '../assets/streamfyfondecran.jpg'
+import fondecran from '../assets/streamfyfondecran.png'
 
 import Banner from '../components/Banner';
 import Body from '../components/Body';

@@ -32,6 +32,10 @@ function Cards(props){
         }
     }
 
+    function addList(){
+      
+    }
+
     useEffect(() => {
       getData();
       
@@ -48,7 +52,7 @@ function Cards(props){
             <h1 className="populaire">{props.category.toUpperCase()}</h1>
             <section className="secards">
               
-              {listMoviesFiltered.length !=0 && listMoviesFiltered.map((film) => {
+              {listMoviesFiltered.map((film) => {
               return(
                   <div key={film.id}>
                     <Link to={`/films/info/${film.id}`}>

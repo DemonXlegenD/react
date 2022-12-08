@@ -1,6 +1,7 @@
 .lmj-banner {
 	color: black;
-	background-color: rgb(94, 122, 122);
+	background: rgb(252,252,252);
+	background: radial-gradient(circle, rgba(252,252,252,1) 0%, rgba(214,212,212,1) 14%, rgba(226,226,227,1) 35%, rgba(65,66,69,1) 54%, rgba(38,39,43,1) 76%, rgba(38,39,43,1) 100%);
 	text-align: center;
 	padding: 32px;
 	border-bottom: solid 3px black;
@@ -13,6 +14,7 @@
 
 
 .lmj-logo {
+	padding-top: 30px;
 	height: 250px;
 	width: 450;
 }   

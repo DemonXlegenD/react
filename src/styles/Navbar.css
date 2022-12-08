@@ -1,5 +1,11 @@
 span.text{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(209, 209, 209)
+}
+
+.nodeco{
+    text-decoration: none;
+    color: rgb(209, 209, 209);
 }
 
 .navbarecart{
@@ -12,3 +18,4 @@ span.text{
     right: 0;
     margin-right:25px
 }
+
