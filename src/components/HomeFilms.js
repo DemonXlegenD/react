@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import { CardGroup } from "react-bootstrap";
-import '../styles/RandomFilms.css'
+import '../styles/HomeFilms.css'
 
 
 function HomeFilms() {

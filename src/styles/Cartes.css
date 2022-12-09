@@ -202,3 +202,101 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
   }
+
+  .titleinput{
+    text-shadow:   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000,
+     1px 1px 2px #141414,
+     1px 1px 3px #141414,
+     1px 1px 5px #141414,
+     1px 1px 7px #141414,
+     1px 1px 10px #141414,
+     1px 1px 12px #141414,
+     1px 1px 18px #141414;color:#fff;
+     padding:20px
+  }
+
+  /*==============================*/
+/* partie commune               */
+/*==============================*/
+input[type=range].custom-slider.custom-slider-bullet {
+  height: 2em;
+  color: #FFF;
+  background: transparent;
+  background-image: linear-gradient(to bottom, #FFF, #999, #FFF);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+}
+/*==============================*/
+/* le curseur                   */
+/*==============================*/
+input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-moz-range-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+
+.ligne{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1.title{
+  text-shadow:   -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000,
+   1px 1px 2px #141414,
+   1px 1px 3px #141414,
+   1px 1px 5px #141414,
+   1px 1px 7px #141414,
+   1px 1px 10px #141414,
+   1px 1px 12px #141414,
+   1px 1px 18px #141414;color:#fff;
+   padding:20px
+}
+
+.button-checked{
+  border-radius: 20px;
+  margin-left: 20px;
+  background-color: #000;
+}
+
+button.title{
+  text-shadow:   -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000,
+   1px 1px 2px #141414,
+   1px 1px 3px #141414,
+   1px 1px 5px #141414,
+   1px 1px 7px #141414,
+   1px 1px 10px #141414,
+   1px 1px 12px #141414,
+   1px 1px 18px #141414;color:#fff;
+}

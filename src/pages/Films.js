@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import logostreamfy from '../assets/logostreamfy.png'
 import fondecran from '../assets/streamfyfondecran.png'
 import Banner from '../components/Banner';
@@ -10,7 +10,6 @@ import Movies from '../components/Movies';
 function Films(){
 
     const [string, setString] = useState("")
-    console.log(string)
   
     return(
         <div>

@@ -13,7 +13,6 @@ function Informations(){
       
     async function getData() {
         const film = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=d3994bb5c3f66e144147b5e2130fc60c`);
-        console.log("film", film.data);
         setFilm(film.data);
         setFilms(film.data)
     }

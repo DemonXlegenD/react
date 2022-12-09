@@ -1,0 +1,30 @@
+.info_Movie {
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: black;
+    opacity: 50%;
+    color: azure;
+    text-align: center;
+}
+
+
+
+#name_Movie {
+    text-decoration: underline white;
+}
+
+.overwiew_Movie {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#homepage_Movie {
+    text-decoration: underline;
+}
+
+.release_Movie{
+    text-decoration: underline;
+    font-weight: bold;
+}

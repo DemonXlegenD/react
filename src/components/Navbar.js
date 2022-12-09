@@ -11,12 +11,8 @@ import { Link } from 'react-router-dom';
 
 function NavScroll({string, setString}) {
 
-
-  console.log(string)
-
   function handleChange(e) {
     setString(e.target.value)
-    console.log(e.target.value)
   }
 
   return (
