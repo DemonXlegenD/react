@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
 
-
+//Création de la navbar grâce à boostrap
 
 function NavScroll({string, setString}) {
 

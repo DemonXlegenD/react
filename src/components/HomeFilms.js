@@ -10,7 +10,7 @@ import '../styles/HomeFilms.css'
 
 function HomeFilms() {
 
-    
+    //Page Home avec beaucoups de films affichés pour présenter un peu le contenu du site
     const [listMovies1, setListMovies1]= useState([])
     const [listMovies2, setListMovies2]= useState([])
     const [listMoviesFiltered1, setListMoviesFiltered1]= useState([])

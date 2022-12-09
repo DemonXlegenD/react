@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Element = ({film,id,setMine, mine}) => {
 
+        //Fonction qui doit retirer le film mais ne marche pas
 
     // function handleRemove() {
     //     const tmpList = [...mine];

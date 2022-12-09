@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 function Informations(){
 
+        //Page d'information sur les films
     let { id } = useParams();
     const [film, setFilm] = useState(null);
     const [films, setFilms] = useState(null);

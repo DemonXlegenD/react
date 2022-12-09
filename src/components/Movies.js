@@ -15,6 +15,7 @@ function Movies({string, setString}){
 
     
     return(
+      //les bars pour les filtrages
       <div>
         <div className="ligne">
           <div className="titleinput">
@@ -34,6 +35,7 @@ function Movies({string, setString}){
           </div>
         </div>
 
+        {/*créer les listes de films et les afficher*/}
         <MyList  mine={mine} setMine={setMine}/>
         <Cards   mine={mine} setMine={setMine} rangeValue1={rangeValue1} rangeValue2={rangeValue2} rangeValue3={rangeValue3} string={string} setString={setString} category={cat[0]}/>
         <Cards   mine={mine} setMine={setMine} rangeValue1={rangeValue1} rangeValue2={rangeValue2} rangeValue3={rangeValue3} string={string} setString={setString} category={cat[1]}/>

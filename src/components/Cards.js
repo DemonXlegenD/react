@@ -8,6 +8,7 @@ import '../styles/Cartes.css'
 
 function Cards({mine, setMine, string, rangeValue1, rangeValue2, rangeValue3, category}){
 
+  //affiche les films sous formes de cartes déroulantes
     const [myList, setMyList] = useState(JSON.parse(localStorage.getItem("list")) || []);
     const [listMovies, setListMovies]= useState([])
     const [listMoviesFiltered, setListMoviesFiltered]= useState([])
