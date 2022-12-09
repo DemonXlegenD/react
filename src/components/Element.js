@@ -3,20 +3,18 @@ import { Link } from "react-router-dom";
 
 const Element = ({film,id,setMine, mine}) => {
 
-        //Fonction qui doit retirer le film mais ne marche pas
-
-    // function handleRemove() {
-    //     const tmpList = [...mine];
-    //     console.log("ma liste", tmpList);
-    //     console.log("mon id", id);
-    //     var index = tmpList.findIndex(function (o) {
-    //       return o.id === id;
-    //     });
-    //     if (index !== -1) tmpList.splice(index, 1);
-    //     console.log("ma liste après supression", tmpList);
-    //     setMine(tmpList);
-    //     localStorage.setItem("list", JSON.stringify(tmpList))
-    //   }
+    function handleRemove() {
+        const tmpList = [...mine];
+        console.log("ma liste", tmpList);
+        console.log("mon id", id);
+        var index = tmpList.findIndex(function (o) {
+          return o.id === id;
+        });
+        if (index !== -1) tmpList.splice(index, 1);
+        console.log("ma liste après supression", tmpList);
+        setMine(tmpList);
+        localStorage.setItem("list", JSON.stringify(tmpList))
+      }
 
     function handleSubmit() {
         setMine(mine)
@@ -45,7 +43,7 @@ const Element = ({film,id,setMine, mine}) => {
                     </a> 
                     </Link>
                     <div style={{ padding: "10px", borderBottom: "1px solid" }}>
-                        {/* <p>{film}</p> <button onClick={handleRemove}>remove</button> */}
+                        <button onClick={handleRemove}>remove</button>
                     </div>
                   </div>
     )
