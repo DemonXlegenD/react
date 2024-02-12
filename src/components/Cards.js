@@ -81,13 +81,11 @@ function Cards({mine, setMine, string, rangeValue1, rangeValue2, rangeValue3, ca
                           <h3 className="card__title">{film.original_title}</h3>            
                           <span className="card__date">{film.release_date}</span>
                         </div>
+                       <button onClick={(e)=>handleSubmit(e, film)} value={film} type="submit" className="button_add_movie">+</button>
                       </div>
                     </div>
                     </a> 
                     </Link>
-                    <form >
-                       <button onClick={(e)=>handleSubmit(e, film)} value={film} type="submit">Ajouter à la liste</button>
-                    </form>
                     </div>
                   </div>
               ) 

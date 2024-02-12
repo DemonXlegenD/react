@@ -29,24 +29,43 @@
   }
 
   .secards {
-  height: 120%;
+  min-height: 450px;
   overflow-x:auto;
   overscroll-behavior-x: contain;
   scrollbar-color: rgb(109, 109, 109);
   scrollbar-width: thin;
   display: flex;
   gap: var(--size-5);
-  align-items: start;
-  padding-right: var(--size-10);
-  padding-left: var(--size-10);
-  padding-top: var(--size-5);
-  padding-bottom: var(--size-12);
+  justify-content: start;
   border-radius: var(--radius-3);
   -ms-overflow-styl: none;
-  
+  padding-left: 20px;
+  padding-right: 10px;
   }
 
-  
+.button_add_movie{
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: black;
+  position: relative;
+}
+
+.button_add_movie:hover::after {
+  content: "Ajoutez à la liste";
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  width: 100px;
+  font-size: 12px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .secards::-webkit-scrollbar {
   height: 5px;
   
@@ -96,12 +115,14 @@
   
   .card_ {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
     height: 140%;  
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
-    background-color: #7c7c7c;
+    background-color: #607D8B;
     
   }
 
@@ -114,7 +135,7 @@
   }
   
   .card__image {      
-    width: 100%;
+    width: 80%;
     height: auto;
   }
   
@@ -138,8 +159,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2em;
-    padding: 2em;
+    justify-content: center;
+    height: 75px;
+    padding: 0.5em;
     border-radius: calc(var(--curve) * 1px) 0 0 0;    
     background-color: var(--surface-color);
     transform: translateY(-100%);
@@ -163,6 +185,11 @@
   .card_:hover .card__header {
     transform: translateY(0);
   }
+
+  .card__header-text{
+    text-align: center;
+    margin: auto;
+  }
   
   .card__thumb {
     flex-shrink: 0;
@@ -176,6 +203,7 @@
     font-size: 1.2em;
     margin: 0 0 .3em;
     color: #010125;
+    width: 100%;
   }
   
   .card__tagline {
@@ -215,7 +243,7 @@
      1px 1px 10px #141414,
      1px 1px 12px #141414,
      1px 1px 18px #141414;color:#fff;
-     padding:20px
+     padding:10px
   }
 
   /*==============================*/
@@ -223,6 +251,7 @@
 /*==============================*/
 input[type=range].custom-slider.custom-slider-bullet {
   height: 2em;
+  width: 15em;
   color: #FFF;
   background: transparent;
   background-image: linear-gradient(to bottom, #FFF, #999, #FFF);
@@ -264,6 +293,7 @@ input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
 .ligne{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 h1.title{

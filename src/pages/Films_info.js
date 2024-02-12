@@ -38,8 +38,8 @@ function Informations(){
                 <div className='info_Movie'>
                     <h1 id='name_Movie'>{films?.original_title}</h1>
                     <h3>{films?.tagline}</h3>
-                    {films?.adulte && <img src="./moins18.png"  alt="interdit au moins de 18 ans" />}
-                    {!films?.adulte && <img src="./moins3.png"  alt="interdit au moins de 3 ans" />}
+                    {films?.adulte && <img src="../moins18.png"  alt="interdit au moins de 18 ans" />}
+                    {!films?.adulte && <img src="../moins3.png"  alt="interdit au moins de 3 ans" />}
                     <p id='overwiew_Movie'><br/><span class='overwiew_Movie'>Overwiew</span> : {films?.overview}</p>
                     <p><br/><span class='release_Movie'>Release date</span> : {films?.release_date}</p>
                     <a href={"/"} target="_blank"><br/><br/><br/><span id="homepage_Movie">Homepage</span></a>
