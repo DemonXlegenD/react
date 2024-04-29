@@ -43,14 +43,6 @@
   padding-bottom: var(--size-12);
   border-radius: var(--radius-3);
   }
-
-
-  .secards:hover {
-    gap: var(--size-10);
-    padding-top: var(--size-6);
-    padding-bottom: var(--size-13);
-  }
-
   section{     
     display: grid;
   }
@@ -77,14 +69,6 @@
     background-color: #7c7c7c;
     
   }
-
-  .card:hover{
-    top: -30px;
-    left: -30px;
-    height: 160%;
-    width: 120%;
-
-  }
   
   .card__image {      
     width: 100%;
@@ -101,10 +85,6 @@
     background-color: var(--surface-color);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
-  }
-  
-  .card:hover .card__overlay {
-    transform: translateY(0);
   }
   
   .card__header {
@@ -132,10 +112,7 @@
     fill: var(--surface-color);
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
   }       
-  
-  .card:hover .card__header {
-    transform: translateY(0);
-  }
+
   
   .card__thumb {
     flex-shrink: 0;

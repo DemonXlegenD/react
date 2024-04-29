@@ -30,10 +30,9 @@
 
   .secards {
   min-height: 450px;
-  overflow-x:auto;
+  overflow-x: scroll;
   overscroll-behavior-x: contain;
   scrollbar-color: rgb(109, 109, 109);
-  scrollbar-width: thin;
   display: flex;
   gap: var(--size-5);
   justify-content: start;
@@ -68,16 +67,15 @@
 
 .secards::-webkit-scrollbar {
   height: 5px;
-  
 }
 
 .secards::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
-  
 }
 
 .secards::-webkit-scrollbar-thumb {
   height: 5px;
+  border-radius: 20px;
   background-color: #d5ac68;
 }
 
@@ -88,15 +86,6 @@
 .secards::-webkit-scrollbar:vertical {
   display: none;
 }
-
-
-
-  .secards:hover {
-    gap: var(--size-10);
-    padding-top: var(--size-6);
-    padding-bottom: var(--size-13);
-  }
-
   section{     
     display: grid;
   }
@@ -110,8 +99,6 @@
     list-style-type: none;
     
   }
-
-
   
   .card_ {
     position: relative;
@@ -123,15 +110,13 @@
     overflow: hidden;
     text-decoration: none;
     background-color: #607D8B;
-    
+    opacity: 0.8;
+    transition: opacity 0.5s, shadow 0.5s ;
   }
 
   .card_:hover{
-    top: -30px;
-    left: -30px;
-    height: 160%;
-    width: 120%;
-
+    opacity: 1;
+    box-shadow: 0 8px 10px rgba(255, 153, 0, 0.5), 0 4px 6px rgba(255, 153, 0, 0.5);
   }
   
   .card__image {      
@@ -149,10 +134,6 @@
     background-color: var(--surface-color);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
-  }
-  
-  .card_:hover .card__overlay {
-    transform: translateY(0);
   }
   
   .card__header {
@@ -182,9 +163,6 @@
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
   }       
   
-  .card_:hover .card__header {
-    transform: translateY(0);
-  }
 
   .card__header-text{
     text-align: center;
@@ -249,45 +227,36 @@
   /*==============================*/
 /* partie commune               */
 /*==============================*/
+input[type="range"]::-webkit-slider-thumb{
+  color: #d5ac68;
+  cursor: pointer;
+  background-color: #d5ac68;
+}
 input[type=range].custom-slider.custom-slider-bullet {
   height: 2em;
   width: 15em;
-  color: #FFF;
-  background: transparent;
-  background-image: linear-gradient(to bottom, #FFF, #999, #FFF);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 25%;
+  color: #d5ac68;
+  background-color: #d5ac68;
 }
 /*==============================*/
 /* le curseur                   */
 /*==============================*/
-input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
-  width: 2em;
-  padding: 0.25em;                                              /* largeur du bord */
-  border: 1px solid #888;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+input[type="range"]::-webkit-slider-thumb {
+   
+  background-color: #d5ac68;                                         /* largeur du bord */
+  border: 1px solid rgb(210, 157, 0);
+  border-radius: 20px;
+
 }
-input[type=range].custom-slider.custom-slider-bullet::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   width: 2em;
   padding: 0.25em;                                              /* largeur du bord */
-  border: 1px solid #888;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+  
 }
-input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
+input[type="range"]::-ms-thumb {
   width: 2em;
-  padding: 0.25em;                                              /* largeur du bord */
-  border: 1px solid #888;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+  padding: 0.25em;     
+  background-color: #d5ac68;                                         /* largeur du bord */
 }
 
 .ligne{
